@@ -266,7 +266,7 @@ class PrismaticDynamixelServo(DynamixelServo):
         rospy.loginfo(name + " prismatic joint")
                         
     def jstPosition(self, pos):
-        return self.convertor.angleToWidth(self.ticksToAngle(pos)) # report Joint Status in meters
+        return self.convertor.angleToWidth(self.ticksToAngle(pos))/2 # report Joint Status in meters
         
 
 class HobbyServo(Joint):

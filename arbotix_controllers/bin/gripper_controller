@@ -158,10 +158,10 @@ class ParallelGripperModel(GripperModel):
         self.convertor = ParallelConvert(self.joint)
 
     def widthToAngle(self, width):
-        return self.convertor.widthToAngle(width)
+        return self.convertor.widthToAngle(width*2)
 
     def angleToWidth(self, ang):
-        return self.convertor.angleToWidth(ang)
+        return self.convertor.angleToWidth(ang)/2
             
     def jstToWidth(self, pos):
         # For parallel gripper, joint status is already in width (m)  
